@@ -1,0 +1,15 @@
+<h3> Categorias</h3>
+
+<ul [@listStagger]="categorias$">
+  <li *ngFor="let categorias of categorias$">
+    <ul>
+        <span>Código:</span>    <a href="">{{categorias.id}}</a>
+    </ul>
+
+    <ul>
+     <span>Nome:</span> <a routerLink="/detailcategoria/{{categorias.id}}">{{categorias.nome}}</a>
+    </ul>
+
+    <hr>
+  </li>
+</ul>

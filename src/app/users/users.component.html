@@ -1,0 +1,18 @@
+<h3> Clientes</h3>
+
+<ul [@listStagger]="users$">
+  <li *ngFor="let user of users$">
+    <ul>
+        <span>Código:</span>    <a href="">{{user.id}}</a>
+    </ul>
+
+    <ul>
+     <span>Nome:</span> <a routerLink="/details/{{user.id}}">{{user.nome}}</a>
+    </ul>
+
+    <ul>
+     <span>E-mail:</span> <a href="">{{user.email}}</a>
+    </ul>
+    <hr>
+  </li>
+</ul>
